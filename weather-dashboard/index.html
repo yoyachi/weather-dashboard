@@ -3,10 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="">
+    <title>Weather Dashboard</title>
 </head>
 <body>
     
-    
+        <!-- navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <span class="text-center navbar-brand h1 w-100">Weather Dashboard</span>
+        </nav>
+
+      <!-- container -->
+      <div class="container">
+          <!-- row and column -->
+          <div class="row">
+            <div class="col-4 bg-light">
+                <p class="search-header my-1">Search for a city</p>
+                <div class="input-group mb-3">
+                    <input id="city-input" type="text" class="form-control" placeholder="Enter city name" aria-label="Enter city name">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <form id="history"></form>
+            </div>
+            <!--city name column-->
+            <div class="col-8">
+                <div class="row mr-0">
+                    <div class="col-12 border border-dark m-3 rounded">
+                        <div class="row">
+                            <!--city name row-->
+                            <div class="col-12">
+                                <span id="city-name" class="city-name align-middle">  </span>
+                                 <span id="current-date"></span>
+                                <img id="current-pic"   alt="">
+                            </div>
+                        </div>
+                        <!--temperature row-->
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="temperature"></p>
+                            </div>
+                        </div>
+                        <!--humidity row-->
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="humidity"></p>
+                            </div>
+                        </div>
+                        <!--wind-speed row-->
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="wind-speed"></p>
+                            </div>
+                        </div>
+                        <!--UV index row-->
+                        <div class="row">
+                            <div class="col-12 d-flex">
+                                <p id="UV-index"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--5 days forecast row and column-->
+                <div class="row">
+                    <div class="col-12">
+                        <h3>5-Day Forecast</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <!--day one column-->
+                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+                    <!--day two column-->
+                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+                    <!--day three column-->
+                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+                    <!--day four column-->
+                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+                    <!--day five column-->
+                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
+                  
+
+                  
+
+                       
